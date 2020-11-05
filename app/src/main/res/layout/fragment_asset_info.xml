@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AssetInfoFragment"
+            android:stretchColumns="0,1">
+
+    <TableRow>
+        <TextView
+                android:id="@+id/nameView"
+                android:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_column="1"
+                android:text="symbol"
+                android:id="@+id/symbolView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </TableRow>
+
+    <TableRow android:paddingTop="16dp">
+        <TextView
+                android:text="price(Usd)"
+                android:id="@+id/priceUsdCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/priceUsdView"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="price change in 24hr"
+                android:id="@+id/changePercent24HrCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/changePercent24HrView"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="available supply for trading"
+                android:id="@+id/supplyCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/supplyView"/>
+    </TableRow>
+    <TableRow android:id="@+id/maxSupplyRow">
+        <TextView
+                android:text="total quantity of asset issued"
+                android:id="@+id/maxSupplyCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/maxSupplyView"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="supply x price"
+                android:id="@+id/marketCapUsdCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/marketCapUsdView"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="trading volume(USD)(24hr)"
+                android:id="@+id/volumeUsd24HrCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/volumeUsd24HrView"/>
+    </TableRow>
+    <TableRow android:id="@+id/vwap24HrRow">
+        <TextView
+                android:text="Weighted average price(24hr)"
+                android:id="@+id/vwap24HrCaption"/>
+        <TextView
+                android:text="00000"
+                android:id="@+id/vwap24HrView"/>
+    </TableRow>
+
+    <TableRow android:paddingTop="15dp">
+        <TextView android:text="Asset change graph"/>
+    </TableRow>
+    <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/seekBar1" />
+
+</TableLayout>

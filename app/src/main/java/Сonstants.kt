@@ -1,0 +1,1 @@
+const val ASSET_ID = "asset_id"
