@@ -78,7 +78,7 @@
     </TableRow>
 
     <TableRow android:paddingTop="15dp">
-        <TextView android:text="Asset change graph"/>
+        <TextView android:text="Asset change graph(zoom)"/>
     </TableRow>
     <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/lineChart"

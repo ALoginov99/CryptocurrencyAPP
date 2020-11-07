@@ -7,50 +7,12 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:padding="10px"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/linearLayout"
-            android:background="#999999">
-
-        <TextView
-                android:text="symbol"
-                android:id="@+id/symbol"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"/>
-
-        <TextView
-                android:id="@+id/name"
-                android:text="name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"/>
-
-        <TextView
-                android:text="priceUsd"
-                android:id="@+id/priceUsd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"/>
-
-        <TextView
-                android:text="change24Hr"
-                android:id="@+id/changePercent24Hr"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"/>
-
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
+            android:padding="8dp"
             android:id="@+id/list_assets_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
