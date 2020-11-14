@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:padding="5dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/row_background">
+<layout>
 
+    <data>
+        <import type="android.view.View" />
+        <variable
+                name="assetData"
+                type="com.example.cryptocurrencyapp.model.Asset" />
+    </data>
+
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:padding="5dp"
+              android:layout_marginTop="8dp"
+              android:background="@drawable/row_background">
     <TableRow
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
         <TextView
                 android:textColor="@color/cardview_light_background"
                 android:id="@+id/name"
-                android:text="Bitcoin"
+                android:text="@{assetData.name}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="500"
+                android:text="@{assetData.priceUsd+``}"
                 android:textColor="@color/cardview_light_background"
                 android:id="@+id/priceUsd"
                 android:layout_width="0dp"
@@ -31,19 +38,19 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
         <TextView
-                android:text="BTC"
+                android:text="@{assetData.symbol}"
                 android:textColor="@color/cardview_light_background"
                 android:id="@+id/symbol"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="1000"
+                android:text="@{assetData.changePercent24Hr+``}"
                 android:id="@+id/changePercent24Hr"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:textColor="#00FF00"/>
     </TableRow>
-
 </LinearLayout>
+</layout>

@@ -6,12 +6,12 @@
             app:startDestination="@id/assets">
 
     <fragment android:id="@+id/assets"
-              android:name="com.example.cryptocurrencyapp.Assets"
+              android:name="com.example.cryptocurrencyapp.view.ui.AssetList.AssetListFragment"
               android:label="fragment_assets"
-              tools:layout="@layout/fragment_assets">
+              tools:layout="@layout/fragment_asset_list">
         <action android:id="@+id/action_assets_to_assetInfoFragment" app:destination="@id/assetInfoFragment"/>
     </fragment>
-    <fragment android:id="@+id/assetInfoFragment" android:name="com.example.cryptocurrencyapp.AssetInfoFragment"
+    <fragment android:id="@+id/assetInfoFragment" android:name="com.example.cryptocurrencyapp.view.ui.AssetInfo.AssetInfoFragment"
               android:label="fragment_asset_info" tools:layout="@layout/fragment_asset_info">
         <argument android:name="asset_id" app:argType="string"/>
     </fragment>

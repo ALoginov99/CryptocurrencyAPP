@@ -1,12 +1,14 @@
-package retrofit
+package com.example.cryptocurrencyapp.model.retrofit
 
-import models.*
+import com.example.cryptocurrencyapp.model.AssetHistory
+import com.example.cryptocurrencyapp.model.AssetInfoData
+import com.example.cryptocurrencyapp.model.AssetsData
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface AssetsServices {
+interface ApiServices {
     @GET("assets")
     fun getTopAssets(@Query("limit") limit:Int): Call<AssetsData>
 

@@ -1,14 +1,14 @@
-package com.example.cryptocurrencyapp
+package com.example.cryptocurrencyapp.view.ui.AssetInfo
 
 import ASSET_ID
 import android.graphics.Color
-import android.icu.text.CompactDecimalFormat
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.cryptocurrencyapp.R
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.XAxis
@@ -17,14 +17,13 @@ import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
 import kotlinx.android.synthetic.main.fragment_asset_info.*
-import models.AssetHistory
-import models.AssetInfoData
-import retrofit.AssetsServices
-import retrofit.Common
+import com.example.cryptocurrencyapp.model.AssetHistory
+import com.example.cryptocurrencyapp.model.AssetInfoData
+import com.example.cryptocurrencyapp.model.retrofit.ApiServices
+import com.example.cryptocurrencyapp.model.retrofit.Common
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.Locale
@@ -33,7 +32,7 @@ import java.util.Locale
 class AssetInfoFragment : Fragment() {
 
     private var id:String? = null
-    private lateinit var mService: AssetsServices
+    private lateinit var mService: ApiServices
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

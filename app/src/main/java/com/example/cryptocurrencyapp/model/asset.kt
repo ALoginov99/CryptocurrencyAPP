@@ -1,4 +1,4 @@
-package models
+package com.example.cryptocurrencyapp.model
 
 import java.sql.Date
 
