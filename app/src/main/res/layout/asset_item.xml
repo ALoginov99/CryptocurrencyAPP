@@ -8,7 +8,7 @@
                 type="com.example.cryptocurrencyapp.model.Asset" />
     </data>
 
-<LinearLayout android:orientation="horizontal"
+<LinearLayout android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="@{assetData.priceUsd+``}"
+                android:text="@{@string/generic_float(assetData.priceUsd)}"
                 android:textColor="@color/cardview_light_background"
                 android:id="@+id/priceUsd"
                 android:layout_width="0dp"
@@ -45,12 +45,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="@{assetData.changePercent24Hr+``}"
+                android:text="@{@string/generic_float(assetData.changePercent24Hr)}"
                 android:id="@+id/changePercent24Hr"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
-                android:textColor="#00FF00"/>
+                android:textColor="@{assetData.changePercent24Hr>=0?@android:color/holo_green_light:@android:color/holo_red_dark}"/>
     </TableRow>
 </LinearLayout>
 </layout>
