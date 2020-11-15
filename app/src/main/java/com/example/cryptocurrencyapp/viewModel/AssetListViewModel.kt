@@ -8,9 +8,9 @@ import com.example.cryptocurrencyapp.view.base.BaseViewModel
 class AssetListViewModel : BaseViewModel() {
     val assetListLive = MutableLiveData<List<Asset>>()
 
-    fun fetchRepoList() {
+    fun fetchAssetList() {
         dataLoading.value = true
-        RepoRepository.getInstance().getAssetList() { isSuccess, response ->
+        RepoRepository.getInstance().getAssetList(15) { isSuccess, response ->
             dataLoading.value = false
             if (isSuccess) {
                 assetListLive.value = response?.data

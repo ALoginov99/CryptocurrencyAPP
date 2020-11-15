@@ -29,7 +29,7 @@ class AssetListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewDataBinding.viewmodel?.fetchRepoList()
+        viewDataBinding.viewmodel?.fetchAssetList()
 
         setupAdapter()
         setupObservers()

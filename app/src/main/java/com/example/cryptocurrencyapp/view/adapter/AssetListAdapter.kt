@@ -15,7 +15,6 @@ class AssetListAdapter(private val assetListViewModel: AssetListViewModel)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssetListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val dataBinding = AssetItemBinding.inflate(inflater, parent, false)
-//        val dataBinding = FragmentAssetListBinding.inflate(inflater, parent, false)
         return AssetListViewHolder(dataBinding, assetListViewModel)
     }
 
