@@ -38,7 +38,7 @@
                     android:id="@+id/priceUsdCaption"/>
             <TextView
                     android:textColor="#FFFFFF"
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.priceUsd)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.priceUsd)}"
                     android:id="@+id/priceUsdView"/>
         </TableRow>
         <TableRow>
@@ -47,7 +47,7 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/changePercent24HrCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.changePercent24Hr)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.changePercent24Hr)}"
                     android:textColor="@{viewmodel.assetInfo.changePercent24Hr>=0?@android:color/holo_green_light:@android:color/holo_red_dark}"
                     android:id="@+id/changePercent24HrView"/>
         </TableRow>
@@ -57,7 +57,7 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/supplyCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.supply)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.supply)}"
                     android:textColor="#FFFFFF"
                     android:id="@+id/supplyView"/>
         </TableRow>
@@ -68,7 +68,7 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/maxSupplyCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.maxSupply)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.maxSupply)}"
                     android:textColor="#FFFFFF"
                     android:id="@+id/maxSupplyView"/>
         </TableRow>
@@ -78,7 +78,7 @@
                     android:textColor="@color/cardview_light_background"
                     android:id="@+id/marketCapUsdCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.marketCapUsd)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.marketCapUsd)}"
                     android:textColor="#FFFFFF"
                     android:id="@+id/marketCapUsdView"/>
         </TableRow>
@@ -88,7 +88,7 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/volumeUsd24HrCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.volumeUsd24Hr)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.volumeUsd24Hr)}"
                     android:textColor="#FFFFFF"
                     android:id="@+id/volumeUsd24HrView"/>
         </TableRow>
@@ -99,7 +99,7 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/vwap24HrCaption"/>
             <TextView
-                    android:text="@{@string/generic_float(viewmodel.assetInfo.vwap24Hr)}"
+                    android:text="@{@string/format_float.3f(viewmodel.assetInfo.vwap24Hr)}"
                     android:textColor="@color/cardview_light_background"
                     android:id="@+id/vwap24HrView"/>
         </TableRow>

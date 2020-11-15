@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="@{@string/generic_float(assetData.priceUsd)}"
+                android:text="@{@string/format_float.3f(assetData.priceUsd)}"
                 android:textColor="@color/cardview_light_background"
                 android:id="@+id/priceUsd"
                 android:layout_width="0dp"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"/>
         <TextView
-                android:text="@{@string/generic_float(assetData.changePercent24Hr)}"
+                android:text="@{@string/format_float.3f(assetData.changePercent24Hr)}"
                 android:id="@+id/changePercent24Hr"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
